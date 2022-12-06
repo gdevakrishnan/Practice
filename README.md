@@ -1,2 +1,3 @@
 # Practice
-This Repository for Practicing Web Developmet
+This Repository for our first project (form validation).
+using HTML, CSS, and Javascript
