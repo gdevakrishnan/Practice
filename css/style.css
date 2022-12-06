@@ -1,5 +1,33 @@
+:root {
+    --body: #fdfdfd;
+    --main: #FFA14F;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--body);
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    background-color: var(--main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_img {
+    margin: 10px;
+    width: auto;
+    height: auto;
+    min-width: 100px;
 }
