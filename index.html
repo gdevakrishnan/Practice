@@ -14,20 +14,24 @@
         <img src="images/logo.png" alt="kite" class="logo_img">
     </div>
     <!--Login form-->
-    <form>
-        <div class="form_group">
-            <label for="name">Username:</label>
-            <input type="text" id="name"></input>
-        </div>
-        <div class="form_group">
-            <label for="password">Password</label>
-            <input type="text" id="passcode"></input>
-        </div>
-        <input type="Button">LOGIN</input>
-        <p class="register">
-            don't have an account?
-            <a href="#dummy">Register</a>
-        </p>
-    </form>
+    <div class="form_page">
+        <form>
+            <div class="form_group">
+                <label for="name">Username:</label>
+                <input type="text" id="name" autocomplete="off">
+            </div>
+    
+            <div class="form_group">
+                <label for="password">Password</label>
+                <input type="password" id="password" autocomplete="off">
+            </div>
+            
+            <input type="Button" value="LOGIN">
+            <p class="register">
+                don't have an account?
+                <a href="#dummy">Register</a>
+            </p>
+        </form>
+    </div>
 </body>
 </html>
