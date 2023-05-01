@@ -1,100 +1,326 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+/* Import google font */
+/* It is Ubuntu Mono Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
+/* COLOR PALLETES */
+/* Change the below palletes hexa decimal values to change the color of the whole webpage */
 :root {
-    --body: #fcfcfc;
-    --main: #2F3193;
-    --table: #f1f1f1;
-    --box: #000000;
+    --color1: #585123;
+    --color2: #EEC170;
+    --color3: #F2A65A;
+    --color4: #772F1A;
+    --text: #141414;
+    --bg: #fcfcfc;
 }
 
+
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    /* Change the webpage font family below */
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 body {
     width: 100vw;
     height: 100vh;
-    background-color: var(--body);
-    font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
 }
 
-.logo {
+/* nav */
+nav {
     width: 100%;
-    height: auto;
-    background-color: var(--main);
+    height: 45px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    padding: 10px;
+    background-color: var(--color4);
+    padding: 0px 20px;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
 }
 
-.logo_img {
-    margin: 10px;
-    width: 10%;
-    height: auto;
-    background-color: var(--body);
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-
-/* form */
-.form_page {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form {
-    width: 20%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--table);
-    padding: 30px 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.form_page form .form_group {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.form_page form .form_group label {
-    margin-bottom: 5px;
-}
-
-.form_page form input {
-    width: 100%;
-}
-
-.form_page form input[type='text'], .form_page form input[type='password'] {
-    border: none;
-    outline: none;
-    border-bottom: 2px solid var(--box);
-    background-color: transparent;
-    padding: 4px 8px;
-}
-
-.form_page form input[type='Button'] {
-    background-color: var(--main);
-    outline: none;
-    border: none;
+nav .logo {
+    font-size: 26px;
+    color: var(--color2);
+    text-transform: uppercase;
     cursor: pointer;
-    padding: 8px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: var(--body);
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+}
+
+nav ul li {
+    line-height: 45px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: var(--color3);
+    text-transform: capitalize;
+}
+
+nav ul li:hover a {
+    color: var(--color2);
+}
+
+nav #check, nav .menu_btn {
+    display: none;
+}
+
+/* ##########  Make Navbar Responsive ################# */
+@media screen and (max-width: 800px) {
+    nav {
+        flex-direction: column;
+    }
+    
+    nav .logo {
+        line-height: 45px;
+    }
+    
+    nav ul {
+        position: absolute;
+        top: 45px;
+        right: -40%;
+        width: 40%;
+        height: 100vh;
+        background-color: var(--color1);
+        flex-direction: column;
+        transition: all 0.4s linear;
+    }
+    
+    nav ul li {
+        text-align: center;
+        line-height: 50px;
+    }
+    
+    nav ul li:hover {
+        background-color: var(--color3);
+    }
+    
+    nav ul li:hover a {
+        color: var(--color4);
+    }
+
+    nav .logo, nav ul li, nav ul li a {
+        cursor: default;
+    }
+
+    nav .menu_btn {
+        display: block;
+        position: absolute;
+        right: 35px;
+        top: 12px;
+        font-size: 20px;
+        color: var(--color3);
+    }
+
+    nav #check:checked ~ ul {
+        right: 0px;
+    }
+}
+
+/* #################  Page (style for all pages)  ############### */
+.page {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* ############## Sign up and sign in page ############### */
+.signup_signin_page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: var(--color2);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.signup_signin_page form .title {
+    margin-bottom: 20px;
+    color: var(--color4);
+}
+
+.signup_signin_page form .form_group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.signup_signin_page form .form_group label {
+    font-size: 16px;
+    color: var(--text);
+}
+
+.signup_signin_page form .form_group input[type='text'], .signup_signin_page form .form_group input[type='password'], .signup_signin_page form .form_group input[type='email'] {
+    color: var(--text);
+    font-size: 16px;
+    width: 60%;
+    outline: none;
+    border: none;
+    padding: 4px 10px;
+    background-color: transparent;
+    border: 1px solid var(--text);
+}
+
+.signup_signin_page form input[type='submit'] {
+    margin-top: 15px;
     margin-bottom: 10px;
+    background-color: var(--color4);
+    color: var(--color2);
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.signup_signin_page form .form_message {
+    color: var(--text);
+    font-size: 16px;
+}
+
+.signup_signin_page form .form_message a {
+    color: var(--color4);
+    font-weight: bold;
+}
+
+/* ###########  Responsive signup and login page  ############## */
+@media screen and (max-width: 800px) {
+    .signup_signin_page form {
+        width: 90%;
+    }
+}
+
+
+/*  ############### Profile Page  ############### */
+.profile_page .profile_container {
+    width: 60%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color3);
+    padding: 25px 30px; 
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.profile_page .profile_container .profile_image {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.profile_page .profile_container .profile_image .image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.profile_page .profile_container .profile_image .image img {
+    width:100%;
+    height: auto;
+}
+
+.profile_page .profile_container .user_details {
+    width: auto;
+    height: auto;
+    background-color: var(--color2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.profile_page .profile_container .user_details .user_group {
+    display: flex;
+}
+
+.profile_page .profile_container .user_details .user_group p {
+    color: var(--text);
+    font-size: 17px;
+}
+
+.profile_page .profile_container .user_details .user_group .label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .profile_page .profile_container {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile_page .profile_container .profile_image {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .profile_page .profile_container .profile_image .image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile_page .profile_container .user_details .user_group {
+        flex-direction: column;
+    }
+}
+
+/* ############### Page Not Found ############### */
+.no_page .nopage_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    opacity: 0.3;
+}
+
+.no_page .nopage_container .title {
+    font-size: 700%;
+    color: var(--text);
+}
+
+.no_page .nopage_container .sub_title {
+    color: var(--text);
+}
+
+/* ############### Footer ############### */
+.footer {
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 14);
+}
+
+.footer p {
+    color: var(--bg);
 }
