@@ -1,37 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Project</title>
 </head>
+
 <body>
-    
-    <!-- login Page -->
-    <div class="logo">
-        <img src="images/logo.png" alt="kite" class="logo_img">
+
+
+  <!-- #########  Nav bar  ##########-->
+  <nav>
+    <input type="checkbox" name="check" id="check">
+    <h2 class="logo">logo</h2>
+    <label for="check" class="menu_btn"><i class="fa fa-bars"></i></label>
+    <ul>
+      <li><a href="#signup">Register</a></li>
+      <li><a href="#login">Login</a></li>
+      <li><a href="#profile_page">Profile</a></li>
+      <li><a href="#nopage">No Page</a></li>
+    </ul>
+  </nav>
+
+
+
+  <!-- ###########   Sign up page   ############## -->
+  <section class="page signup_signin_page" id="signup">
+    <form autocomplete="off">
+      <h1 class="title">Register</h1>
+      <div class="form_group">
+        <label for="user_name">User Name</label>
+        <input type="text" name="user_name" id="user_name">
+      </div>
+      <div class="form_group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="form_group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <div class="form_group">
+        <label for="re_password">Re-Password</label>
+        <input type="password" name="re_password" id="re_password">
+      </div>
+      <input type="submit" value="Sign up">
+      <p class="form_message">Already have an account? <a href="#login">Log in</a></p>
+    </form>
+  </section>
+
+  <!-- ###########   Sign in page   ############## -->
+  <section class="page signup_signin_page" id="login">
+    <form autocomplete="off">
+      <h1 class="title">Login</h1>
+      <div class="form_group">
+        <label for="user_name">User Name</label>
+        <input type="text" name="user_name" id="user_name">
+      </div>
+      <!-- If you need email during login remove the below comment -->
+      <!-- <div class="form_group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div> -->
+      <div class="form_group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <!-- <div class="form_group">
+                <label for="re_password">Re - Password</label>
+                <input type="password" name="re_password" id="re_password">
+            </div> -->
+      <input type="submit" value="Log in">
+      <p class="form_message">Dont have an account? <a href="#signup">Register</a></p>
+    </form>
+  </section>
+
+  <!-- ###############  User Profile Page  ###############  -->
+  <section class="page profile_page" id="profile_page">
+    <div class="profile_container">
+      <div class="profile_image">
+        <div class="image">
+          <img src="./images/profile_sample.jpg" alt="Sample Profile Image">
+        </div>
+      </div>
+      <div class="user_details">
+        <div class="user_group">
+          <p class="label">User Name: </p>
+          <p>John micheal</p>
+        </div>
+        <div class="user_group">
+          <p class="label">Email: </p>
+          <p>johnmicheal123@gmail.com</p>
+        </div>
+      </div>
     </div>
-    <!--Login form-->
-    <div class="form_page">
-        <form>
-            <div class="form_group">
-                <label for="name">Username:</label>
-                <input type="text" id="name" autocomplete="off">
-            </div>
-    
-            <div class="form_group">
-                <label for="password">Password</label>
-                <input type="password" id="password" autocomplete="off">
-            </div>
-            
-            <input type="Button" value="LOGIN">
-            <p class="register">
-                don't have an account?
-                <a href="#dummy">Register</a>
-            </p>
-        </form>
+  </section>
+
+  <!-- ###############  Page Not Found ############### -->
+  <section class="page no_page" id="nopage">
+    <div class="nopage_container">
+      <h1 class="title">404</h1>
+      <h1 class="sub_title">Page Not Found</h1>
     </div>
+  </section>
+
+
+  <!-- ###############  Footer ############### -->
+  <footer class="footer">
+    <p>Add the Footer Here</p>
+  </footer>
+
 </body>
+
 </html>
