@@ -5,12 +5,11 @@
 /* COLOR PALLETES */
 /* Change the below palletes hexa decimal values to change the color of the whole webpage */
 :root {
-  --color1: #caf0f8;
-  --color2: #caf0f8;
-  --color3: #48cae4;
-  --color4: #1E88E5;
-  --text: #363636;
-  --bg: #fcfcfc;
+  --color1: #247CFF;
+  --color2: #212529;
+  --bg1: #FCFCFC;
+  --bg2: #F8F9FA;
+  --text: #747275;
 }
 
 
@@ -28,6 +27,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background-color: var(--bg1);
 }
 
 /* nav */
@@ -37,16 +37,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--text);
+  background-color: var(--bg2);
   padding: 0px 20px;
   position: fixed;
   top: 0px;
   z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 nav .logo {
   font-size: 26px;
-  color: var(--color2);
+  color: var(--color1);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -69,7 +70,7 @@ nav ul li a {
 }
 
 nav ul li:hover a {
-  color: var(--color4);
+  color: var(--color1);
 }
 
 nav #check,
@@ -93,7 +94,7 @@ nav .menu_btn {
     right: -40%;
     width: 40%;
     height: 100vh;
-    background-color: var(--bg);
+    background-color: var(--bg1);
     flex-direction: column;
     transition: all 0.4s linear;
   }
@@ -104,7 +105,11 @@ nav .menu_btn {
   }
 
   nav ul li a {
-    color: var(--color3);
+    color: var(--text);
+  }
+
+  nav ul li:hover a {
+    color: var(--color1);
   }
 
   nav .logo,
@@ -144,13 +149,13 @@ nav .menu_btn {
   width: 30%;
   padding: 20px 30px;
   border-radius: 5px;
-  background-color: var(--color2);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: var(--bg1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .signup_signin_page form .title {
   margin-bottom: 20px;
-  color: var(--color4);
+  color: var(--color1);
 }
 
 .signup_signin_page form .form_group {
@@ -162,7 +167,7 @@ nav .menu_btn {
 
 .signup_signin_page form .form_group label {
   font-size: 16px;
-  color: var(--text);
+  color: var(--color2);
 }
 
 .signup_signin_page form .form_group input[type='text'],
@@ -172,7 +177,6 @@ nav .menu_btn {
   font-size: 16px;
   width: 60%;
   outline: none;
-  border: none;
   padding: 4px 10px;
   background-color: transparent;
   border: 1px solid var(--text);
@@ -181,8 +185,8 @@ nav .menu_btn {
 .signup_signin_page form input[type='submit'] {
   margin-top: 15px;
   margin-bottom: 10px;
-  background-color: var(--color4);
-  color: var(--color2);
+  background-color: var(--color2);
+  color: var(--bg1);
   border: none;
   outline: none;
   padding: 5px 10px;
@@ -196,7 +200,7 @@ nav .menu_btn {
 }
 
 .signup_signin_page form .form_message a {
-  color: var(--color4);
+  color: var(--color1);
   font-weight: bold;
 }
 
@@ -215,10 +219,10 @@ nav .menu_btn {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--color4);
+  background-color: var(--bg2);
   padding: 25px 30px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .profile_page .profile_container .profile_image {
@@ -248,7 +252,7 @@ nav .menu_btn {
 .profile_page .profile_container .user_details {
   width: auto;
   height: auto;
-  background-color: var(--color2);
+  background-color: var(--bg1);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -291,6 +295,7 @@ nav .menu_btn {
 
   .profile_page .profile_container .user_details .user_group {
     flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -320,9 +325,9 @@ nav .menu_btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 0, 14);
+  background-color: var(--color2);
 }
 
 .footer p {
-  color: var(--bg);
+  color: var(--bg1);
 }
