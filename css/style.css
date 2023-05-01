@@ -5,322 +5,324 @@
 /* COLOR PALLETES */
 /* Change the below palletes hexa decimal values to change the color of the whole webpage */
 :root {
-    --color1: #585123;
-    --color2: #EEC170;
-    --color3: #F2A65A;
-    --color4: #772F1A;
-    --text: #141414;
-    --bg: #fcfcfc;
+  --color1: #caf0f8;
+  --color2: #caf0f8;
+  --color3: #48cae4;
+  --color4: #1E88E5;
+  --text: #363636;
+  --bg: #fcfcfc;
 }
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    /* Change the webpage font family below */
-    font-family: 'Ubuntu Mono', monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  /* Change the webpage font family below */
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 /* nav */
 nav {
-    width: 100%;
-    height: 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color4);
-    padding: 0px 20px;
-    position: fixed;
-    top: 0px;
-    z-index: 1000;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--text);
+  padding: 0px 20px;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
 }
 
 nav .logo {
-    font-size: 26px;
-    color: var(--color2);
-    text-transform: uppercase;
-    cursor: pointer;
+  font-size: 26px;
+  color: var(--color2);
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 nav ul {
-    display: flex;
-    height: 100%;
+  display: flex;
+  height: 100%;
 }
 
 nav ul li {
-    line-height: 45px;
-    padding: 0px 10px;
-    cursor: pointer;
+  line-height: 45px;
+  padding: 0px 10px;
+  cursor: pointer;
 }
 
 nav ul li a {
-    font-size: 18px;
-    color: var(--color3);
-    text-transform: capitalize;
+  font-size: 18px;
+  color: var(--color2);
+  text-transform: capitalize;
 }
 
 nav ul li:hover a {
-    color: var(--color2);
+  color: var(--color4);
 }
 
-nav #check, nav .menu_btn {
-    display: none;
+nav #check,
+nav .menu_btn {
+  display: none;
 }
 
 /* ##########  Make Navbar Responsive ################# */
 @media screen and (max-width: 800px) {
-    nav {
-        flex-direction: column;
-    }
-    
-    nav .logo {
-        line-height: 45px;
-    }
-    
-    nav ul {
-        position: absolute;
-        top: 45px;
-        right: -40%;
-        width: 40%;
-        height: 100vh;
-        background-color: var(--color1);
-        flex-direction: column;
-        transition: all 0.4s linear;
-    }
-    
-    nav ul li {
-        text-align: center;
-        line-height: 50px;
-    }
-    
-    nav ul li:hover {
-        background-color: var(--color3);
-    }
-    
-    nav ul li:hover a {
-        color: var(--color4);
-    }
+  nav {
+    flex-direction: column;
+  }
 
-    nav .logo, nav ul li, nav ul li a {
-        cursor: default;
-    }
+  nav .logo {
+    line-height: 45px;
+  }
 
-    nav .menu_btn {
-        display: block;
-        position: absolute;
-        right: 35px;
-        top: 12px;
-        font-size: 20px;
-        color: var(--color3);
-    }
+  nav ul {
+    position: absolute;
+    top: 45px;
+    right: -40%;
+    width: 40%;
+    height: 100vh;
+    background-color: var(--bg);
+    flex-direction: column;
+    transition: all 0.4s linear;
+  }
 
-    nav #check:checked ~ ul {
-        right: 0px;
-    }
+  nav ul li {
+    text-align: center;
+    line-height: 50px;
+  }
+
+  nav ul li a {
+    color: var(--color3);
+  }
+
+  nav .logo,
+  nav ul li,
+  nav ul li a {
+    cursor: default;
+  }
+
+  nav .menu_btn {
+    display: block;
+    position: absolute;
+    right: 35px;
+    top: 12px;
+    font-size: 20px;
+    color: var(--color3);
+  }
+
+  nav #check:checked~ul {
+    right: 0px;
+  }
 }
 
 /* #################  Page (style for all pages)  ############### */
 .page {
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
 /* ############## Sign up and sign in page ############### */
 .signup_signin_page form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    padding: 20px 30px;
-    border-radius: 5px;
-    background-color: var(--color2);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-color: var(--color2);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .signup_signin_page form .title {
-    margin-bottom: 20px;
-    color: var(--color4);
+  margin-bottom: 20px;
+  color: var(--color4);
 }
 
 .signup_signin_page form .form_group {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 .signup_signin_page form .form_group label {
-    font-size: 16px;
-    color: var(--text);
+  font-size: 16px;
+  color: var(--text);
 }
 
-.signup_signin_page form .form_group input[type='text'], .signup_signin_page form .form_group input[type='password'], .signup_signin_page form .form_group input[type='email'] {
-    color: var(--text);
-    font-size: 16px;
-    width: 60%;
-    outline: none;
-    border: none;
-    padding: 4px 10px;
-    background-color: transparent;
-    border: 1px solid var(--text);
+.signup_signin_page form .form_group input[type='text'],
+.signup_signin_page form .form_group input[type='password'],
+.signup_signin_page form .form_group input[type='email'] {
+  color: var(--text);
+  font-size: 16px;
+  width: 60%;
+  outline: none;
+  border: none;
+  padding: 4px 10px;
+  background-color: transparent;
+  border: 1px solid var(--text);
 }
 
 .signup_signin_page form input[type='submit'] {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    background-color: var(--color4);
-    color: var(--color2);
-    border: none;
-    outline: none;
-    padding: 5px 10px;
-    font-size: 17px;
-    border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background-color: var(--color4);
+  color: var(--color2);
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 17px;
+  border-radius: 5px;
 }
 
 .signup_signin_page form .form_message {
-    color: var(--text);
-    font-size: 16px;
+  color: var(--text);
+  font-size: 16px;
 }
 
 .signup_signin_page form .form_message a {
-    color: var(--color4);
-    font-weight: bold;
+  color: var(--color4);
+  font-weight: bold;
 }
 
 /* ###########  Responsive signup and login page  ############## */
 @media screen and (max-width: 800px) {
-    .signup_signin_page form {
-        width: 90%;
-    }
+  .signup_signin_page form {
+    width: 90%;
+  }
 }
 
 
 /*  ############### Profile Page  ############### */
 .profile_page .profile_container {
-    width: 60%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--color3);
-    padding: 25px 30px; 
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  width: 60%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color4);
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .profile_page .profile_container .profile_image {
-    width: 40%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    padding: 20px;
+  width: 40%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 20px;
 }
 
 .profile_page .profile_container .profile_image .image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .profile_page .profile_container .profile_image .image img {
-    width:100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .profile_page .profile_container .user_details {
-    width: auto;
-    height: auto;
-    background-color: var(--color2);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  width: auto;
+  height: auto;
+  background-color: var(--color2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .profile_page .profile_container .user_details .user_group {
-    display: flex;
+  display: flex;
 }
 
 .profile_page .profile_container .user_details .user_group p {
-    color: var(--text);
-    font-size: 17px;
+  color: var(--text);
+  font-size: 17px;
 }
 
 .profile_page .profile_container .user_details .user_group .label {
-    font-weight: bold;
-    margin-right: 10px;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 800px) {
-    .profile_page .profile_container {
-        width: 80%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .profile_page .profile_container {
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .profile_page .profile_container .profile_image {
-        justify-content: center;
-        margin-bottom: 30px;
-    }
+  .profile_page .profile_container .profile_image {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 
-    .profile_page .profile_container .profile_image .image {
-        width: 200px;
-        height: 200px;
-    }
+  .profile_page .profile_container .profile_image .image {
+    width: 200px;
+    height: 200px;
+  }
 
-    .profile_page .profile_container .user_details .user_group {
-        flex-direction: column;
-    }
+  .profile_page .profile_container .user_details .user_group {
+    flex-direction: column;
+  }
 }
 
 /* ############### Page Not Found ############### */
 .no_page .nopage_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    opacity: 0.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  opacity: 0.3;
 }
 
 .no_page .nopage_container .title {
-    font-size: 700%;
-    color: var(--text);
+  font-size: 700%;
+  color: var(--text);
 }
 
 .no_page .nopage_container .sub_title {
-    color: var(--text);
+  color: var(--text);
 }
 
 /* ############### Footer ############### */
 .footer {
-    width: 100%;
-    height: auto;
-    min-height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 0, 14);
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 14);
 }
 
 .footer p {
-    color: var(--bg);
+  color: var(--bg);
 }
